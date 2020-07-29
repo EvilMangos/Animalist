@@ -1,0 +1,30 @@
+{
+  "name": "animalist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvilMangos/Animalist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvilMangos/Animalist/issues"
+  },
+  "homepage": "https://github.com/EvilMangos/Animalist#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.9.26"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
