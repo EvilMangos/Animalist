@@ -3,16 +3,16 @@
 }
 body {
   background-image: url("/source/background.jpg");
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(1px);
   margin: 0;
   padding: 0;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(130, 130, 130);
 }
 .body__inner {
   padding: 20px 50px 0px 50px;
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 17px;
-  color: rgb(130, 130, 130);
 }
 .main {
   display: flex;
@@ -24,4 +24,12 @@ body {
 }
 .main {
   margin-top: 40px;
+}
+.main__inner {
+  margin-left: 40px;
+  display: block;
+  width: 90%;
+}
+.content {
+  margin: 40px;
 }

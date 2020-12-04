@@ -5,13 +5,22 @@
 
         </div>
 
-        <div class="user__field">
-            {{#if false}}
-
+        <div class="user__fields">
+            {{#if loggedIn }}
+            <div class="user__menu">
+                <ul>
+                    <li class="user__menu-first"><a href="">{{user.username}}</a></li>
+                    <li><a href="">{{user.e_mail}}</a></li>
+                    <li><a href="">Settings</a></li>
+                    <li><a href="/logout">Log out</a></li>
+                </ul>
+            </div>
+            <div class="loggedUser__fields">
+                <img src="/source/user.png" alt="Default user photo">
+            </div>
             {{else}}
-            <a href="#">Sign up</a>
-            <a href="#">Sign in</a>
+            <button id="sign__up">Sign up</button>
+            <button id="sign__in">Sign in</button>
             {{/if}}
         </div>
-    </div>
 </header>

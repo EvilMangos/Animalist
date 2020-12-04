@@ -1,0 +1,46 @@
+<div class="menu">
+    <ul>
+        <li>
+            {{#if isHome}}
+            <a href="/" class="home actived">Home</a>
+            {{else}}
+            <a href="/" class="home">Home</a>
+            {{/if}}
+        </li>
+        <li>
+            {{#if isPosts}}
+            <a href="/posts" class="actived">Posts</a>
+            {{else}}
+            <a href="/posts">Posts</a>
+            {{/if}}
+        </li>
+        <li>
+            {{#if isNews}}
+            <a href="/news" class="actived">News</a>
+            {{else}}
+            <a href="/news">News</a>
+            {{/if}}
+        </li>
+        <li>
+            {{#if isAbout}}
+            <a href="/about" class="actived">About</a>
+            {{else}}
+            <a href="/about">About</a>
+            {{/if}}
+        </li>
+        {{#if loggedIn}}
+        <style type="text/css">
+            .menu li {
+                min-width: 20%;
+            }
+        </style>
+        <li>
+            {{#if isLiked}}
+            <a href="/liked" class="actived">Liked</a>
+            {{else}}
+            <a href="/liked">Liked</a>
+            {{/if}}
+        </li>
+        {{/if}}
+    </ul>
+</div>

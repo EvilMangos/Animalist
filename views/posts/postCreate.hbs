@@ -1,0 +1,30 @@
+<div class="postCreate__inner">
+    <div class="center-align">
+        <h1>Create post</h1>
+    </div>
+    <form action="/create/post" method="POST">
+        <div class="postCreate__title">
+            <label for="postCreate__title">Title</label>
+            <input type="text" name="title" id="postCreate__title">
+        </div>
+        <div class="postCreate__main">
+            <div class="postCreate__text">
+                <label for="post__text">Text</label>
+                <textarea name="text" id="post__text" cols="80" rows="15"></textarea>
+            </div>
+            <div class="postCreate__btns">
+                <div class="postCreate__image">
+                    <h3>Load Photo</h3>
+                    <label class="default__btn" for="postCreate__btn-img">Load photo</label>
+                    <input type="file" name="postCreate__btn-img" id="postCreate__btn-img"
+                        accept="image/jpeg,image/png">
+                    <span>File not selected</span>
+                    <img class="imageForPost" src="" alt=" ">
+
+                </div>
+                <button name="photo" class="postCreate__post" type="submit">Post</button>
+            </div>
+
+        </div>
+    </form>
+</div>

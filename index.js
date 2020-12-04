@@ -2,14 +2,34 @@ const express = require("express");
 const hbs = require("hbs");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
-const homeRouter = require("./routes/router");
 const path = require("path");
+const expressSession = require("express-session");
+const flash = require("connect-flash");
+var bodyParser = require("body-parser");
+
+const homeRouter = require("./routes/router");
 
 const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(
+  expressSession({
+    secret: "So sad man",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
 
+global.loggedIn = null;
+app.use("*", (req, res, next) => {
+  loggedIn = req.session.userId;
+  next();
+});
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(flash());
 app.engine(
   "hbs",
   exphbs({

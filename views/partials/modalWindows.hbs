@@ -1,0 +1,75 @@
+<div class="modal__sign__up modal">
+    <div class="modal__content part">
+        <div class="center-align">
+            <div class="passwordError">
+                Passwors not match
+            </div>
+        </div>
+
+        <span class="close">&times;</span>
+        <h2>Registration</h2>
+        <form action="/signUp" method="POST">
+            <div class="center-align">
+                <div class="modalColumn">
+                    <div class="pair">
+                        <label for="firstName">First name:</label><input name="firstName" id="firstName" type="text"
+                            maxlength="24" minlength="3" required>
+                    </div>
+                    <div class="pair">
+                        <label for="e-mail">E-mail:</label><input name="e_mail" id="e_mail" type="email" maxlength="32"
+                            minlength="5" required>
+                    </div>
+                    <div class="pair">
+                        <label for="createPassword">Create password:</label><input name="password" id="password"
+                            type="password" maxlength="20" minlength="5" required>
+                    </div>
+                </div>
+                <div class="modalColumn">
+                    <div class="pair">
+                        <label for="lastName">Last name:</label><input name="lastName" id="lastName" type="text"
+                            maxlength="24" minlength="3" required>
+                    </div>
+                    <div class="pair">
+                        <label for="age">Age:</label><input name="age" id="age" type="number" min="2" max="150">
+                    </div>
+                    <div class="pair">
+                        <label for="confirmPassword">Confirm password:</label><input name="confirmPassword"
+                            id="confirmPassword" type="password" maxlength="20" minlength="5" required>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" name="registr__btn" id="registr__btn" class="default__btn">Create accaunt</button>
+        </form>
+    </div>
+</div>
+
+<div class="modal__sign__in modal">
+    <div class="modal__content part">
+        <span class="close">&times;</span>
+        <h2>Authorisation</h2>
+        <form action="/signIn" method="POST">
+            <div class="center-align">
+                {{#if err}}
+                <span class="passwordError">Wrong login or password</span>
+                {{/if}}
+                <div class="container">
+                    <div class="modalColumn">
+                        <div class="pair">
+                            <label for="logE_mail">E-mail:</label><input name="logE_mail" id="logE_mail" type="text"
+                                maxlength="24" required>
+                        </div>
+
+                    </div>
+                    <div class="modalColumn">
+                        <div class="pair">
+                            <label for="logPassword">Password:</label><input name="logPassword" id="logPassword"
+                                type="password" maxlength="32" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" name="login__btn" id="login__btn" class="default__btn">Sign in</button>
+
+        </form>
+    </div>
+</div>

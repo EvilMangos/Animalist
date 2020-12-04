@@ -1,0 +1,56 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.body__inner {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+.footer__inner {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(168, 168, 168);
+  margin-top: 40px;
+}
+.contacts {
+  margin-top: 27px;
+  position: relative;
+}
+.contacts span {
+  margin-right: 40px;
+  padding-left: 25px;
+}
+.contacts span a {
+  text-decoration: none;
+  color: rgb(168, 168, 168);
+  padding-left: 25px;
+}
+.contacts span:hover {
+  color: rgb(120, 120, 120);
+}
+.contacts span a:hover {
+  color: rgb(120, 120, 120);
+}
+.label {
+  margin: 27px 30px;
+}
+.e_mail:before {
+  content: "\e901";
+  font-family: "icomoon";
+  position: absolute;
+  font-size: 22px;
+  pointer-events: none;
+}
+.number:before {
+  content: "\e942";
+  font-family: "icomoon";
+  position: absolute;
+  pointer-events: none;
+}

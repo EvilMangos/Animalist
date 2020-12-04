@@ -11,19 +11,62 @@ header {
   padding-left: 40px;
   padding-top: 10px;
 }
-.user__field a {
-  text-decoration: none;
+.user__fields button {
+  background-color: transparent;
   color: rgb(140, 140, 140);
-  font-size: 18px;
   margin-right: 25px;
   padding: 5px;
   transition: border-color 0.3s ease;
   border: 1px solid transparent;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 18px;
 }
-.user__field a:hover {
+.user__fields button:hover {
   border-color: rgb(180, 180, 180);
 }
-.user__field {
-  padding-right: 40px;
-  padding-top: 18px;
+.user__fields {
+  margin-right: 40px;
+  display: flex;
+}
+.loggedUser__fields {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.user__menu {
+  margin-right: 20px;
+}
+.user__menu ul {
+  list-style-type: none;
+  margin: 0;
+  position: relative;
+}
+.user__menu ul li {
+  background-color: rgb(219, 219, 219);
+  opacity: 0.7;
+  cursor: pointer;
+  padding: 4px 8px 4px 25px;
+  display: none;
+  width: 180px;
+  transition: background-color 0.1s;
+}
+.user__menu ul li:hover {
+  opacity: 1;
+}
+.user__menu ul li:active {
+  background-color: rgb(199, 199, 199);
+  opacity: 1;
+}
+.user__menu-first:before {
+  font-family: "icomoon";
+  content: "\e902";
+  position: absolute;
+  transform: translate(-20px, 3px);
+}
+.user__menu ul li a {
+  color: rgb(117, 117, 117);
+  text-decoration: none;
 }

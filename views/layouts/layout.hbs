@@ -3,14 +3,18 @@
 <body>
     <div class="body__inner">
         {{> header}}
-        <div class="main">
+        <section class="main">
             {{> categories}}
-            <section class="part">
-                {{{body}}}
-            </section>
-        </div>
+            <div class="part main__inner">
+                {{> menu}}
+                <div class="content">
+                    {{{body}}}
+                </div>
+        </section>
+        {{> modalWindows}}
     </div>
-
+    {{> footer}}
+    {{> scripts}}
 </body>
 
 </html>

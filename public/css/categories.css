@@ -5,15 +5,20 @@
   color: rgb(50, 50, 50);
   text-decoration: none;
   line-height: 24px;
-  font-size: 18px;
   border-bottom: 1px solid rgb(150, 150, 150);
   display: block;
   padding-top: 2px;
   padding-left: 20px;
   /* transition: 0.1s; */
 }
-/* .categories a:before {
-} */
+.categories a:before {
+  content: "\e900";
+  font-family: "icomoon";
+  color: rgb(100, 100, 100);
+  font-size: 10px;
+  position: absolute;
+  transform: translate(-15px, 0px);
+}
 .categories a:hover {
   background-color: rgb(230, 230, 230);
 }
@@ -22,4 +27,7 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 4px;
+}
+.categories li {
+  position: relative;
 }

@@ -1,0 +1,9 @@
+h1 {
+  color: rgb(80, 80, 80);
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+.home__inner p {
+  line-height: 24px;
+}
